@@ -1,0 +1,25 @@
+package com.softtek;
+
+import java.util.List;
+
+public class Assignment2 {
+
+	public static void main(String[] args) {
+
+		System.out.println("Find minimum & maximum");
+		List<Integer> list = List.of(2, 4, 8, 9, 4, 6);
+		System.out.println(list);
+		Integer min = list.stream().min((i1, i2) -> i1.compareTo(i2)).get();
+		System.out.println("The minimun number of the given list is " + min);
+		Integer max = list.stream().max((i1, i2) -> i1.compareTo(i2)).get();
+		System.out.println("The maximum number of the given list is " + max);
+
+		System.out.println("------------------------------------------------");
+		System.out.println("Count Strings whose length is greater than 3 in List");
+		List<String> list2 = List.of("lokesh", "loki");
+		long count = list2.stream().filter(s -> s.length() > 3).count();
+		System.out.println(count);
+
+	}
+
+}
